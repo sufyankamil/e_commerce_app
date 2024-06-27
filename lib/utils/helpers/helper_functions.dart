@@ -284,16 +284,16 @@ class EHelperFunctions {
     return Theme.of(context).brightness == Brightness.light;
   }
 
-  static Size screenSize(BuildContext context) {
-    return MediaQuery.of(context).size;
+  static Size screenSize() {
+    return MediaQuery.of(Get.context!).size;
   }
 
-  static double screenHeight(BuildContext context) {
-    return screenSize(context).height;
+  static double screenHeight() {
+    return MediaQuery.of(Get.context!).size.height;
   }
 
-  static double screenWidth(BuildContext context) {
-    return screenSize(context).width;
+  static double screenWidth() {
+    return MediaQuery.of(Get.context!).size.width;
   }
 
   static String getFormattedDate(DateTime? date, {String format = 'dd-MMM-yyyy'}) {

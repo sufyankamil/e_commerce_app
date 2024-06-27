@@ -4,6 +4,8 @@ class ETexts {
   static const String onBoardingTitle2 = "Discover New Products";
   static const String onBoardingTitle3 = "Get Started";
   static const String onBoardingTitle4 = "Deliver at your door step";
+  static const String skip = "Skip";
+  static const String next = "Next";
 
   static const String onBoardingSubtitle1 = "Welcome to a World of Limitless Choices - Your Perfect Shopping Destination";
   static const String onBoardingSubtitle2 = "Explore a wide range of products from various categories";
