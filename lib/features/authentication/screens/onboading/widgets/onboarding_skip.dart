@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/device/device_utility.dart';
+import '../../../controller/onboarding_controller.dart';
 
 class OnBoardingSkip extends StatelessWidget {
   const OnBoardingSkip({
@@ -11,6 +13,8 @@ class OnBoardingSkip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnboardingController());
+
     return Positioned(
       right: ESizes.defaultSpace,
       top: EDeviceUtils.getAppBarHeight(),
@@ -19,7 +23,7 @@ class OnBoardingSkip extends StatelessWidget {
         children: [
           TextButton(
             onPressed: () {
-              // Skip Onboarding
+              controller.skipOnboarding();
             },
             child: const Text(ETexts.skip),
           ),

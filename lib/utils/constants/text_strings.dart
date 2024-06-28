@@ -16,5 +16,10 @@ class ETexts {
   static const String homeTitle = "Home";
   static const String homeSubtitle = "Explore a wide range of products from various categories";
 
+  // Login
+  static const String loginTitle = "Login";
+  static const String loginSubtitle = "Login to your account to continue shopping";
+
+
 
 }
