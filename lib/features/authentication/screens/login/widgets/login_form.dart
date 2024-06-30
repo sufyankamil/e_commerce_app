@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
+import '../../signup/signup.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -47,7 +49,16 @@ class LoginForm extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value) {}),
+                    SizedBox(
+                      width: 24,
+                      height: 24,
+                      child: Checkbox(
+                        value: true,
+                        onChanged: (value) {},
+                        activeColor: EColors.primaryColor,
+                      ),
+                    ),
+                    const SizedBox(width: ESizes.spaceBtwItems),
                     const Text(ETexts.rememberMe),
                   ],
                 ),
@@ -82,7 +93,7 @@ class LoginForm extends StatelessWidget {
                     color: dark ? Colors.white : EColors.grey,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () => Get.to(() => const SignupScreen()),
                 child: Text(
                   ETexts.createAccount,
                   style: TextStyle(

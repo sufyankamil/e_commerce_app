@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
               LoginForm(dark: dark),
 
               // Divider
-              FormDivider(dark: dark, text: ETexts.signInWith),
+              const FormDivider(text: ETexts.signInWith),
 
               // Footer
               const Footer()

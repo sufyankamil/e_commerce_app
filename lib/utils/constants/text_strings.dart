@@ -48,7 +48,7 @@ class ETexts {
   static const String alreadyHaveAccount = "Already have an account?";
   static const String dontHaveAccount = "Don't have an account?";
   static const String iAgreeTo = "I agree to";
-  static const String termsOfService = "Terms of Service";
+  static const String termsOfService = "Terms of use";
   static const String privacyPolicy = "Privacy Policy";
   static const String and = "and";
   static const String continueText = "Continue";

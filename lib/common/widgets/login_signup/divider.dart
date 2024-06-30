@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
+import '../../../utils/helpers/helper_functions.dart';
 
 class FormDivider extends StatelessWidget {
   const FormDivider({
     super.key,
-    required this.dark,
     required this.text,
   });
-
-  final bool dark;
 
   final String text;
 
   @override
   Widget build(BuildContext context) {
+    final dark = EHelperFunctions.isDarkMode(context);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
