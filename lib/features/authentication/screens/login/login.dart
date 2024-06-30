@@ -1,10 +1,13 @@
-import 'package:e_commerce_app/utils/constants/image_strings.dart';
+import 'package:e_commerce_app/features/authentication/screens/login/widgets/login_form.dart';
+import 'package:e_commerce_app/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../common/styles/spacing_styles.dart';
+import '../../../../common/widgets/login_signup/divider.dart';
+import '../../../../common/widgets/login_signup/footer.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 import '../../controller/onboarding_controller.dart';
 
@@ -28,33 +31,19 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: ESpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image(
-                    image: AssetImage(
-                        dark ? EImages.darkAppLogo : EImages.lightAppLogo),
-                    height: 150,
-                  ),
-                  const SizedBox(height: ESizes.sm),
-                  Text(
-                    ETexts.loginTitle,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                  const SizedBox(height: ESizes.sm),
-                  Text(
-                    ETexts.loginSubtitle,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ],
-              ),
+              // Header
+              LoginHeader(dark: dark),
 
-              // Forms
               const SizedBox(height: ESizes.defaultSpace),
-              Form(
-                  child: Column(
-                children: [],
-              ))
+
+              // Form
+              LoginForm(dark: dark),
+
+              // Divider
+              FormDivider(dark: dark, text: ETexts.signInWith),
+
+              // Footer
+              const Footer()
             ],
           ),
         ),

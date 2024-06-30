@@ -4,7 +4,7 @@ class EColors {
   EColors._(); // To avoid creating an instance of this class
 
   // App Basic Colors
-  static const Color primaryColor = Color(0xFF3F51B5);
+  static const Color primaryColor = Color(0xFF374ED5);
   static const Color secondaryColor = Color(0xFFFFE24B);
   static const Color accentColor = Color(0xFFb0c7ff);
 
@@ -47,7 +47,7 @@ class EColors {
   //Neutral Shades Colors
   static const Color black = Color(0xFF232323);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color grey = Color(0xFF9E9E9E);
+  static const Color grey = Color(0xFFB3B2B2);
   static const Color greyLight = Color(0xFFE0E0E0);
   static const Color greyDark = Color(0xFF616161);
 }

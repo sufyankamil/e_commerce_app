@@ -37,5 +37,7 @@ flutter:
   assets:
     - assets/
     - assets/images/on_boarding_images/
+    - assets/images/account_created/
     - assets//logos/
+    - assets/icons/
   #   - images/a_dot_ham.jpeg
