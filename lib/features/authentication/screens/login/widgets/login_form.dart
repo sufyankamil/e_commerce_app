@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../../navigation_menu.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
+import '../../password_configuration/forget_password.dart';
 import '../../signup/signup.dart';
 
 class LoginForm extends StatelessWidget {
@@ -63,7 +65,7 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.off(() => const ForgetPassword()),
                   child: const Text(ETexts.forgotPassword),
                 ),
               ],
@@ -74,10 +76,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: EColors.primaryColor,
-                ),
+                onPressed: () => Get.to(() => const NavigationMenu()),
                 child: const Text(ETexts.signIn),
               ),
             ),

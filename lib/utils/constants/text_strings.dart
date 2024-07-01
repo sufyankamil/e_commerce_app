@@ -54,6 +54,9 @@ class ETexts {
   static const String continueText = "Continue";
   static const String resendEmail = "Resend Email";
   static const String verifyEmail = "Verify Email";
+  static const String submit = "Submit";
+  static const String resetPassword = "Reset Password";
+  static const String done = "Done";
 
   // Authentication Header Texts
   static const String loginTitle = "Welcome Back!";
@@ -61,7 +64,9 @@ class ETexts {
       "Discover New Products and Start Shopping";
   static const String signUpTitle = "Create an Account";
   static const String forgotPasswordSubtitle =
-      "Don't worry! Resetting your password is easy. Just enter the email you used to create your account and we will send you a reset link.";
+      "Don't worry! Sometimes it happens. Just enter your email and we will send you a reset link to reset your password.";
+  static const String resetPasswordSubtitle =
+      "Don't worry! Your account is safe with us. We`ve sent you an email with a link to reset your password. Please check your inbox and follow the instructions in the email.";
   static const String changePasswordTitle = "Password Reset Email Sent";
   static const String changePasswordSubtitle =
       "We have sent you an email with a link to reset your password. Please check your inbox and follow the instructions in the email.";
