@@ -20,6 +20,9 @@ class ETexts {
   static const String homeTitle = "Home";
   static const String homeSubtitle =
       "Explore a wide range of products from various categories";
+  static const String homeAppBarTitle = "Discover New Products";
+  static const String homeAppBarSubtitle =
+      "Explore a wide range of products from various categories";
 
   // Authentication Form Texts
   static const String firstName = "First Name";
