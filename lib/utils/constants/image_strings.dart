@@ -24,4 +24,11 @@ class EImages {
   // Account Creation
   static const String accountCreation =
       'assets/images/account_created/acc_created.json';
+
+  // Categories Icons
+  static const String electronics = 'assets/icons/categories/electronics.jpg';
+  static const String earphones = 'assets/icons/categories/earphone.jpg';
+  static const String clothes = 'assets/icons/categories/clothes.jpg';
+  static const String shoes = 'assets/icons/categories/shoes.jpg';
+  static const String beauty = 'assets/icons/categories/facial.jpg';
 }

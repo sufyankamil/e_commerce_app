@@ -13,46 +13,51 @@ class ESearchContainer extends StatelessWidget {
     this.icon = Iconsax.search_normal,
     this.showBackground = true,
     this.showBorder = true,
+    this.onTap,
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: ESizes.defaultSpace),
-      child: Container(
-        width: EDeviceUtils.getScreenWidth(),
-        padding: const EdgeInsets.all(ESizes.md),
-        decoration: BoxDecoration(
-          color: showBackground
-              ? dark
-                  ? EColors.dark
-                  : EColors.light
-              : Colors.transparent,
-          borderRadius: BorderRadius.circular(ESizes.cardRadiusLg),
-          border: showBorder
-              ? Border.all(
-                  color: dark ? EColors.dark : EColors.grey,
-                )
-              : null,
-        ),
-        child: Row(
-          children: [
-            const Icon(
-              Iconsax.search_normal,
-              color: EColors.greyDark,
-            ),
-            const SizedBox(width: ESizes.spaceBtwItems),
-            Text(
-              'Search for products',
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-          ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: ESizes.defaultSpace),
+        child: Container(
+          width: EDeviceUtils.getScreenWidth(),
+          padding: const EdgeInsets.all(ESizes.md),
+          decoration: BoxDecoration(
+            color: showBackground
+                ? dark
+                    ? EColors.dark
+                    : EColors.light
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(ESizes.cardRadiusLg),
+            border: showBorder
+                ? Border.all(
+                    color: dark ? EColors.dark : EColors.grey,
+                  )
+                : null,
+          ),
+          child: Row(
+            children: [
+              const Icon(
+                Iconsax.search_normal,
+                color: EColors.greyDark,
+              ),
+              const SizedBox(width: ESizes.spaceBtwItems),
+              Text(
+                'Search for products',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ],
+          ),
         ),
       ),
     );
