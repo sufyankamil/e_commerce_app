@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/constants/colors.dart';
@@ -5,22 +6,26 @@ import '../../../../utils/constants/colors.dart';
 class ECircularContainer extends StatelessWidget {
   const ECircularContainer({
     super.key,
-    this.width = 400,
-    this.height = 300,
-    this.radius = 400,
-    this.padding = 0,
+    this.width,
+    this.height,
+    this.radius = ESizes.cardRadiusLg,
+    this.padding,
     this.child,
     this.bgColor = EColors.white,
     this.margin,
+    this.showBorder = false,
+    this.borderColor = EColors.borderPrimary,
   });
 
   final double? width;
   final double? height;
   final double radius;
-  final double padding;
+  final EdgeInsetsGeometry? padding;
   final Widget? child;
   final Color bgColor;
-  final EdgeInsets? margin;
+  final EdgeInsetsGeometry? margin;
+  final bool showBorder;
+  final Color borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +33,11 @@ class ECircularContainer extends StatelessWidget {
       height: height,
       width: width,
       margin: margin,
-      padding: EdgeInsets.all(padding),
+      padding: padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius),
         color: bgColor,
+        border: showBorder ? Border.all(color: borderColor) : null,
       ),
       child: child,
     );

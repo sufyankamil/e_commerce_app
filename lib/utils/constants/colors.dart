@@ -16,7 +16,7 @@ class EColors {
   // Background Colors
   static const Color light = Color(0xFFF6f6f6);
   static const Color dark = Color(0xFF272727);
-  static const Color primaryBackgroud = Color(0xFFF3F5FF);
+  static const Color primaryBackground = Color(0xFFF3F5FF);
 
   // Background Container Colors
   static const Color lightContainer = Color(0xFFF6f6f6);
@@ -50,4 +50,5 @@ class EColors {
   static const Color grey = Color(0xFFB3B2B2);
   static const Color greyLight = Color(0xFFE0E0E0);
   static const Color greyDark = Color(0xFF616161);
+  static const Color darkerGrey = Color(0xFF424242);
 }

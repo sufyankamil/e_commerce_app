@@ -23,6 +23,7 @@ dependencies:
   carousel_slider: ^4.2.1
   flutter_native_splash: ^2.4.0
   smooth_page_indicator: ^1.1.0
+  flutter_image_compress: ^2.3.0
   lottie: ^3.1.2
 
 dev_dependencies:
@@ -43,3 +44,4 @@ flutter:
     - assets/icons/
     - assets/icons/categories/
     - assets/images/banners/
+    - assets/images/products/

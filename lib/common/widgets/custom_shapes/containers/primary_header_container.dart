@@ -29,6 +29,10 @@ class EPrimaryHeaderContainer extends StatelessWidget {
                 right: -250,
                 child: ECircularContainer(
                   bgColor: EColors.textWhiteColor.withOpacity(0.1),
+                  width: 400,
+                  height: 300,
+                  radius: 400,
+                  padding: const EdgeInsets.all(0),
                 ),
               ),
               Positioned(
@@ -36,6 +40,10 @@ class EPrimaryHeaderContainer extends StatelessWidget {
                 right: -300,
                 child: ECircularContainer(
                   bgColor: EColors.textWhiteColor.withOpacity(0.1),
+                  width: 400,
+                  height: 300,
+                  radius: 400,
+                  padding: const EdgeInsets.all(0),
                 ),
               ),
               child,
