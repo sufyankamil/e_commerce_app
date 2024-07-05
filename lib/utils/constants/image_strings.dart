@@ -31,4 +31,11 @@ class EImages {
   static const String clothes = 'assets/icons/categories/clothes.jpg';
   static const String shoes = 'assets/icons/categories/shoes.jpg';
   static const String beauty = 'assets/icons/categories/facial.jpg';
+
+  // Banner Images
+  static const String banner1 = 'assets/images/banners/banner-1.png';
+  static const String banner2 = 'assets/images/banners/banner-2.png';
+  static const String banner3 = 'assets/images/banners/banner-3.png';
+  static const String banner4 = 'assets/images/banners/banner-4.png';
+  static const String banner5 = 'assets/images/banners/banner-5.png';
 }

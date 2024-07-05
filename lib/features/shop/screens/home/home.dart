@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_commerce_app/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:e_commerce_app/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/material.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
+import '../../../../utils/constants/image_strings.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,6 +46,20 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            /// Body
+            const Padding(
+              padding: EdgeInsets.all(ESizes.defaultSpace),
+              child: EPromoSlider(
+                banners: [
+                  EImages.banner1,
+                  EImages.banner2,
+                  EImages.banner3,
+                  EImages.banner4,
+                  EImages.banner5,
+                ],
+              ),
+            )
           ],
         ),
       ),
