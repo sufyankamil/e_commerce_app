@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/common/styles/shadows.dart';
+import 'package:e_commerce_app/common/widgets/texts/brand_title_text_with_icon.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
@@ -78,29 +79,19 @@ class EProductCardVertical extends StatelessWidget {
             const SizedBox(height: ESizes.spaceBtwItems / 2),
 
             /// Details
-            Padding(
-              padding: const EdgeInsets.all(ESizes.sm),
+            const Padding(
+              padding: EdgeInsets.all(ESizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductTitle(
+                  ProductTitle(
                     title: 'Apple iPhone 11',
                     smallSize: true,
                   ),
-                  const SizedBox(height: ESizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text('Apple',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: Theme.of(context).textTheme.labelMedium),
-                      const SizedBox(width: ESizes.xs),
-                      const Icon(
-                        Iconsax.verify5,
-                        size: ESizes.iconSizeXs,
-                        color: EColors.primaryColor,
-                      ),
-                    ],
+                  SizedBox(height: ESizes.spaceBtwItems / 2),
+                  EBrandTitleWithIcon(
+                    title: 'Apple',
+                    textAlign: TextAlign.start,
                   ),
                 ],
               ),
