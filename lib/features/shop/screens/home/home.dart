@@ -7,15 +7,19 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
+import '../../../../utils/helpers/helper_functions.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final dark = EHelperFunctions.isDarkMode(context);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -32,12 +36,13 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: ESizes.spaceBtwSections),
 
                   /// Heading
-                  const Padding(
-                    padding: EdgeInsets.only(left: ESizes.spaceBtwItems),
+                  Padding(
+                    padding: const EdgeInsets.only(left: ESizes.spaceBtwItems),
                     child: ESectionHeading(
                       title: 'Popular Categories',
                       showActionButton: false,
                       textColor: EColors.white,
+                      onButtonPressed: () {},
                     ),
                   ),
                   const SizedBox(height: ESizes.spaceBtwItems),
@@ -49,11 +54,11 @@ class HomeScreen extends StatelessWidget {
             ),
 
             /// Body
-            const Padding(
-              padding: EdgeInsets.all(ESizes.defaultSpace),
+            Padding(
+              padding: const EdgeInsets.all(ESizes.defaultSpace),
               child: Column(
                 children: [
-                  EPromoSlider(
+                  const EPromoSlider(
                     banners: [
                       EImages.banner1,
                       EImages.banner2,
@@ -62,10 +67,24 @@ class HomeScreen extends StatelessWidget {
                       EImages.banner5,
                     ],
                   ),
-                  SizedBox(height: ESizes.spaceBtwSections),
+                  const SizedBox(height: ESizes.spaceBtwSections),
+
+                  ESectionHeading(
+                    title: 'Popular Products',
+                    showActionButton: true,
+                    textColor: dark ? EColors.white : EColors.black,
+                    onButtonPressed: () {},
+                  ),
+
+                  const SizedBox(height: ESizes.spaceBtwItems),
 
                   /// Popular Products
-                  EProductCardVertical(),
+                  EGridLayout(
+                    itemCount: 8,
+                    itemBuilder: (context, index) {
+                      return const EProductCardVertical();
+                    },
+                  ),
                 ],
               ),
             )

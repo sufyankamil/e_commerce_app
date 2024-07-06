@@ -18,6 +18,7 @@ class ESectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           title,
@@ -27,7 +28,6 @@ class ESectionHeading extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        const Spacer(),
         showActionButton
             ? TextButton(
                 onPressed: onButtonPressed,
