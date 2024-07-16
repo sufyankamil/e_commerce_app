@@ -38,17 +38,22 @@ class HomeScreen extends StatelessWidget {
                   /// Heading
                   Padding(
                     padding: const EdgeInsets.only(left: ESizes.spaceBtwItems),
-                    child: ESectionHeading(
-                      title: 'Popular Categories',
-                      showActionButton: false,
-                      textColor: EColors.white,
-                      onButtonPressed: () {},
+                    child: Column(
+                      children: [
+                        ESectionHeading(
+                          title: 'Popular Categories',
+                          showActionButton: false,
+                          textColor: EColors.white,
+                          onButtonPressed: () {},
+                        ),
+                        const SizedBox(height: ESizes.spaceBtwItems),
+
+                        /// Categories
+                        const EHomeCategories(),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: ESizes.spaceBtwItems),
-
-                  /// Categories
-                  const EHomeCategories(),
+                  const SizedBox(height: ESizes.spaceBtwSections),
                 ],
               ),
             ),

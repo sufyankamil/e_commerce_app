@@ -59,7 +59,7 @@ class EPromoSlider extends StatelessWidget {
                   bgColor: controller.carouselIndex.value == i
                       ? EColors.primaryColor
                       : EColors.grey,
-                  margin: EdgeInsets.only(right: 10),
+                  margin: const EdgeInsets.only(right: 10),
                 ),
             ],
           ),

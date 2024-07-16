@@ -81,19 +81,22 @@ class EProductCardVertical extends StatelessWidget {
             /// Details
             const Padding(
               padding: EdgeInsets.all(ESizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ProductTitle(
-                    title: 'Apple iPhone 11',
-                    smallSize: true,
-                  ),
-                  SizedBox(height: ESizes.spaceBtwItems / 2),
-                  EBrandTitleWithIcon(
-                    title: 'Apple',
-                    textAlign: TextAlign.start,
-                  ),
-                ],
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ProductTitle(
+                      title: 'Apple iPhone 11',
+                      smallSize: true,
+                    ),
+                    SizedBox(height: ESizes.spaceBtwItems / 2),
+                    EBrandTitleWithIcon(
+                      title: 'Apple',
+                      textAlign: TextAlign.start,
+                    ),
+                  ],
+                ),
               ),
             ),
 

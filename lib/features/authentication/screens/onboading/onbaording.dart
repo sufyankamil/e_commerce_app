@@ -10,7 +10,7 @@ import '../../../../utils/constants/image_strings.dart';
 import '../../controller/onboarding_controller.dart';
 
 class Onbaording extends StatefulWidget {
-  const Onbaording({Key? key}) : super(key: key);
+  const Onbaording({super.key});
 
   @override
   State<Onbaording> createState() => _OnbaordingState();

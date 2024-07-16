@@ -48,8 +48,4 @@ class OnboardingController extends GetxController {
   }
 
   // Dispose
-  @override
-  void onClose() {
-    super.onClose();
-  }
 }
