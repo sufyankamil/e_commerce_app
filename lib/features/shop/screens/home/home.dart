@@ -28,11 +28,14 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const EHomeAppBar(),
+
                   const SizedBox(height: ESizes.spaceBtwSections),
+
                   ESearchContainer(
                     text: 'Search for products',
                     onTap: () {},
                   ),
+
                   const SizedBox(height: ESizes.spaceBtwSections),
 
                   /// Heading
@@ -46,6 +49,7 @@ class HomeScreen extends StatelessWidget {
                           textColor: EColors.white,
                           onButtonPressed: () {},
                         ),
+
                         const SizedBox(height: ESizes.spaceBtwItems),
 
                         /// Categories
@@ -72,6 +76,7 @@ class HomeScreen extends StatelessWidget {
                       EImages.banner5,
                     ],
                   ),
+
                   const SizedBox(height: ESizes.spaceBtwSections),
 
                   ESectionHeading(

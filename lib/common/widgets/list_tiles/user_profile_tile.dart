@@ -6,7 +6,10 @@ import '../../../utils/constants/colors.dart';
 class EUserProfileTile extends StatelessWidget {
   const EUserProfileTile({
     super.key,
+    required this.onPressed,
   });
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,7 @@ class EUserProfileTile extends StatelessWidget {
         ),
         trailing: IconButton(
           icon: const Icon(Iconsax.arrow_right_2, color: EColors.white),
-          onPressed: () {},
+          onPressed: onPressed,
         ));
   }
 }
