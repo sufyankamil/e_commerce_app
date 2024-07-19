@@ -26,37 +26,33 @@ class ECircularIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
 
-    return IconButton(
-      icon: Icon(
-        icon,
-        color: color ?? (dark ? EColors.white : EColors.black),
-        size: size,
-      ),
-      onPressed: () {},
-    );
-
-    // return Container(
-    //   width: width,
-    //   height: height,
-    //   decoration: BoxDecoration(
-    //     color: backgroundColor ??
-    //         (dark
-    //             ? EColors.black.withOpacity(0.9)
-    //             : EColors.white.withOpacity(0.9)),
-    //     borderRadius: BorderRadius.circular(100),
+    // return IconButton(
+    //   icon: Icon(
+    //     icon,
+    //     color: color ?? (dark ? EColors.white : EColors.black),
+    //     size: size,
     //   ),
-    //   child: IconButton(
-    //     icon: Icon(
-    //       icon,
-    //       color: color != null
-    //           ? color
-    //           : dark
-    //               ? EColors.white
-    //               : EColors.black,
-    //       size: size,
-    //     ),
-    //     onPressed: () {},
-    //   ),
+    //   onPressed: () {},
     // );
+
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        color: backgroundColor ??
+            (dark
+                ? EColors.black.withOpacity(0.9)
+                : EColors.white.withOpacity(0.9)),
+        borderRadius: BorderRadius.circular(100),
+      ),
+      child: IconButton(
+        icon: Icon(
+          icon,
+          color: color ?? (dark ? EColors.white : EColors.black),
+          size: size,
+        ),
+        onPressed: onTap,
+      ),
+    );
   }
 }

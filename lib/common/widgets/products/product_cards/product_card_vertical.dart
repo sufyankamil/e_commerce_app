@@ -4,8 +4,10 @@ import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../features/shop/screens/product_details/product_detail.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../custom_shapes/containers/circular_container.dart';
 import '../../icons/circular_icon.dart';
@@ -21,7 +23,7 @@ class EProductCardVertical extends StatelessWidget {
     final dark = EHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetail()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -58,7 +60,7 @@ class EProductCardVertical extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .labelLarge!
-                            .copyWith(color: EColors.black),
+                            .apply(color: EColors.black),
                       ),
                     ),
                   ),

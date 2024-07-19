@@ -137,7 +137,7 @@ class EHelperFunctions {
     } else if (value == 'Blue Grey') {
       return Colors.blueGrey;
     }
-    return Colors.black;
+    return const Color(0xFF374ED5);
   }
 
   static String getInitials(String name) {
@@ -171,7 +171,8 @@ class EHelperFunctions {
     ));
   }
 
-  static void showSnackBarWithAction(BuildContext context, String message, String actionText, Function() onPressed) {
+  static void showSnackBarWithAction(BuildContext context, String message,
+      String actionText, Function() onPressed) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text(message),
       action: SnackBarAction(
@@ -197,7 +198,8 @@ class EHelperFunctions {
     );
   }
 
-  static void showAlertWithAction(String title, String message, String actionText, Function() onPressed) {
+  static void showAlertWithAction(
+      String title, String message, String actionText, Function() onPressed) {
     showDialog(
       context: Get.overlayContext!,
       builder: (context) => AlertDialog(
@@ -217,7 +219,8 @@ class EHelperFunctions {
     );
   }
 
-  static void showConfirmationDialog(String title, String message, String actionText, Function() onConfirm) {
+  static void showConfirmationDialog(
+      String title, String message, String actionText, Function() onConfirm) {
     showDialog(
       context: Get.overlayContext!,
       builder: (context) => AlertDialog(
@@ -237,7 +240,13 @@ class EHelperFunctions {
     );
   }
 
-  static void showConfirmationDialogWithAction(String title, String message, String actionText, Function() onConfirm, String actionText2, Function() onConfirm2) {
+  static void showConfirmationDialogWithAction(
+      String title,
+      String message,
+      String actionText,
+      Function() onConfirm,
+      String actionText2,
+      Function() onConfirm2) {
     showDialog(
       context: Get.overlayContext!,
       builder: (context) => AlertDialog(
@@ -296,7 +305,8 @@ class EHelperFunctions {
     return MediaQuery.of(Get.context!).size.width;
   }
 
-  static String getFormattedDate(DateTime? date, {String format = 'dd-MMM-yyyy'}) {
+  static String getFormattedDate(DateTime? date,
+      {String format = 'dd-MMM-yyyy'}) {
     return DateFormat(format).format(date ?? DateTime.now());
   }
 
