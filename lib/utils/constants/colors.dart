@@ -47,7 +47,7 @@ class EColors {
   //Neutral Shades Colors
   static const Color black = Color(0xFF232323);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color grey = Color(0xFFB3B2B2);
+  static const Color grey = Color(0xFFBEBDBD);
   static const Color greyLight = Color(0xFFE0E0E0);
   static const Color greyDark = Color(0xFF616161);
   static const Color darkerGrey = Color(0xFF424242);

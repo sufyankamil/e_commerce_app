@@ -141,7 +141,9 @@ class ProductAttributes extends StatelessWidget {
               ],
             )
           ],
-        )
+        ),
+
+        ///
       ],
     );
   }

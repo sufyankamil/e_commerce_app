@@ -32,7 +32,7 @@ class ESearchContainer extends StatelessWidget {
       child: Padding(
         padding: padding,
         child: Container(
-          width: EDeviceUtils.getScreenWidth(),
+          width: EDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(ESizes.md),
           decoration: BoxDecoration(
             color: showBackground

@@ -30,15 +30,16 @@ class EDeviceUtils {
   }
 
   static void setFullScreen(bool enable) {
-    SystemChrome.setEnabledSystemUIMode(enable ? SystemUiMode.immersiveSticky : SystemUiMode.edgeToEdge);
+    SystemChrome.setEnabledSystemUIMode(
+        enable ? SystemUiMode.immersiveSticky : SystemUiMode.edgeToEdge);
   }
 
   static double getScreenHeight() {
     return MediaQuery.of(Get.context!).size.height;
   }
 
-  static double getScreenWidth() {
-    return MediaQuery.of(Get.context!).size.width;
+  static double getScreenWidth(BuildContext context) {
+    return MediaQuery.of(context).size.width;
   }
 
   static double getPixelRatio() {
@@ -68,7 +69,8 @@ class EDeviceUtils {
   }
 
   static Future<bool> isPhysicalDevice() async {
-    return defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.iOS;
+    return defaultTargetPlatform == TargetPlatform.android ||
+        defaultTargetPlatform == TargetPlatform.iOS;
   }
 
   static void vibrate(Duration duration) {
