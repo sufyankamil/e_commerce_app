@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../address/address.dart';
 import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -60,7 +61,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: 'My Address',
                     subtitle: 'Add or remove address',
-                    onTap: () {},
+                    onTap: () => Get.to(() => const UserAddress()),
                   ),
                   ESettingsMenuTile(
                     icon: Iconsax.shopping_cart,
