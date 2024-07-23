@@ -1,11 +1,11 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
-import 'package:e_commerce_app/common/widgets/texts/product_price_text.dart';
+import 'package:e_commerce_app/features/shop/screens/cart/widgets/cart_items.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import '../../../../common/widgets/products/cart/add_remove_cart.dart';
-import '../../../../common/widgets/products/cart/cart_item.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
+import '../checkout/checkout.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -19,38 +19,14 @@ class CartScreen extends StatelessWidget {
         title: Text('Cart', style: Theme.of(context).textTheme.headlineSmall),
         showBackButton: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(ESizes.defaultSpace),
-        child: ListView.separated(
-            shrinkWrap: true,
-            itemBuilder: (_, index) => const Column(
-                  children: [
-                    ECartItem(),
-                    SizedBox(height: ESizes.spaceBtwItems),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(width: 70),
-
-                            /// Add & Remove Buttons
-                            EProductQuantAddRemove(),
-                          ],
-                        ),
-                        EProductPriceText(price: '200'),
-                      ],
-                    )
-                  ],
-                ),
-            separatorBuilder: (_, __) =>
-                const SizedBox(height: ESizes.spaceBtwSections),
-            itemCount: 10),
+      body: const Padding(
+        padding: EdgeInsets.all(ESizes.defaultSpace),
+        child: ECartItems(),
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(ESizes.defaultSpace),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () => Get.to(() => const Checkout()),
           child: const Text('Checkout \$200'),
         ),
       ),
