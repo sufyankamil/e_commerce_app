@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../common/widgets/image_text_widget/vertical_image_text.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/image_strings.dart';
+import '../../sub_category/sub_categories.dart';
 
 class EHomeCategories extends StatelessWidget {
   const EHomeCategories({
@@ -40,6 +42,7 @@ class EHomeCategories extends StatelessWidget {
             textColor: EColors.white,
             onTap: () {
               print('Category $index tapped');
+              Get.to(() => const SubCategories());
             },
           );
         },

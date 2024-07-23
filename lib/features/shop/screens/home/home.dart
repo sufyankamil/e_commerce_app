@@ -4,6 +4,7 @@ import 'package:e_commerce_app/features/shop/screens/home/widgets/promo_slider.d
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
@@ -12,6 +13,7 @@ import '../../../../common/widgets/products/product_cards/product_card_vertical.
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/helpers/helper_functions.dart';
+import '../all_products/all_products.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -83,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                     title: 'Popular Products',
                     showActionButton: true,
                     textColor: dark ? EColors.white : EColors.black,
-                    onButtonPressed: () {},
+                    onButtonPressed: () => Get.to(() => const AllProducts()),
                   ),
 
                   const SizedBox(height: ESizes.spaceBtwItems),
