@@ -1,14 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
-import '../screens/login/login.dart';
+import '../../screens/login/login.dart';
 
 class OnboardingController extends GetxController {
   static OnboardingController get to => Get.find();
 
   // Variables
   final pageController = PageController();
-  Rx<int> currentIndex = 0.obs; // change design without using stateful widget or setState
+  Rx<int> currentIndex =
+      0.obs; // change design without using stateful widget or setState
 
   // Update Current Index when Page Scroll
   void updateCurrentIndex(int index) {
@@ -36,7 +38,9 @@ class OnboardingController extends GetxController {
 
   // Finish Onboarding
   void finishOnboarding() {
-    if(currentIndex.value == 2) {
+    if (currentIndex.value == 2) {
+      final storage = GetStorage();
+      storage.write('isFirstTime', false);
       // Navigate to Login Screen
       Get.to(() => const LoginScreen());
     } else {

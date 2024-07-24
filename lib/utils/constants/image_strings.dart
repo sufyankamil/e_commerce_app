@@ -3,6 +3,9 @@ class EImages {
   static const String lightAppLogo = 'assets/logos/light_logo.png';
   static const String darkAppLogo = 'assets/logos/dark_logo.png';
 
+  // Loading Animation
+  static const String loadingAnimation = 'assets/loader/loading.json';
+
   // Social Logos
   static const String facebookLogo = 'assets/icons/facebook.json';
   static const String googleLogo = 'assets/icons/google.json';

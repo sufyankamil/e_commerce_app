@@ -9,7 +9,7 @@ import '../../../../common/styles/spacing_styles.dart';
 import '../../../../common/widgets/login_signup/divider.dart';
 import '../../../../common/widgets/login_signup/footer.dart';
 import '../../../../utils/helpers/helper_functions.dart';
-import '../../controller/onboarding_controller.dart';
+import '../../controller/onboarding/onboarding_controller.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

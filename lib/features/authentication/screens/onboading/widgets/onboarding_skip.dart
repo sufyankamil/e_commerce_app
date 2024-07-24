@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/device/device_utility.dart';
-import '../../../controller/onboarding_controller.dart';
+import '../../../controller/onboarding/onboarding_controller.dart';
 
 class OnBoardingSkip extends StatelessWidget {
   const OnBoardingSkip({
@@ -27,7 +27,6 @@ class OnBoardingSkip extends StatelessWidget {
             },
             child: const Text(ETexts.skip),
           ),
-
         ],
       ),
     );

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../utils/constants/image_strings.dart';
-import '../../controller/onboarding_controller.dart';
+import '../../controller/onboarding/onboarding_controller.dart';
 
 class Onbaording extends StatefulWidget {
   const Onbaording({super.key});
@@ -23,7 +23,6 @@ class _OnbaordingState extends State<Onbaording> {
 
     return Scaffold(
       body: Stack(
-
         children: [
           PageView(
             controller: controller.pageController,
@@ -56,4 +55,3 @@ class _OnbaordingState extends State<Onbaording> {
     );
   }
 }
-

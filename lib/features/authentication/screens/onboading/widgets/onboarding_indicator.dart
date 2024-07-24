@@ -6,7 +6,7 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
-import '../../../controller/onboarding_controller.dart';
+import '../../../controller/onboarding/onboarding_controller.dart';
 
 class OnbaordingIndicator extends StatelessWidget {
   const OnbaordingIndicator({
@@ -28,7 +28,7 @@ class OnbaordingIndicator extends StatelessWidget {
           controller.jumpToPage(index);
         },
         count: 3,
-        effect:  ExpandingDotsEffect(
+        effect: ExpandingDotsEffect(
           dotColor: Colors.grey,
           activeDotColor: dark ? EColors.white : EColors.black,
           dotHeight: 8,
