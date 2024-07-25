@@ -105,6 +105,25 @@ class AuthRepository extends GetxController {
     }
   }
 
+  /// [Reset Password]
+  Future<void> resetPassword(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+      ELoaders.successSnackBar(
+          title: 'Success', message: 'Password reset link has been sent');
+    } on FirebaseAuthException catch (e) {
+      throw EFirebaseAuthException(e.code).errorMessage;
+    } on FirebaseException catch (e) {
+      throw EFirebaseException(e.code).errorMessage;
+    } on FormatException catch (_) {
+      throw const FormatException();
+    } on PlatformException catch (e) {
+      throw EPlatformException(e.code).errorMessage;
+    } catch (e) {
+      throw 'Something went wrong while sending email verification';
+    }
+  }
+
   /* ----------------- Sign Out --------------- */
   Future<void> signOut() async {
     try {

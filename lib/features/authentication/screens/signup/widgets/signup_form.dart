@@ -1,6 +1,7 @@
 import 'package:e_commerce_app/features/authentication/screens/signup/widgets/terms_conditions.dart';
 import 'package:e_commerce_app/utils/validators/validators.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -89,6 +90,9 @@ class SignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.call),
             ),
             validator: (value) => EValidator.validatePhoneNumber(value),
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(RegExp('[0-9]'))
+            ],
           ),
 
           const SizedBox(height: ESizes.spaceBtwInputFields),
