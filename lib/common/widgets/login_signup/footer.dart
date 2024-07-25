@@ -1,4 +1,6 @@
+import 'package:e_commerce_app/features/authentication/controller/login/login_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../../utils/constants/image_strings.dart';
@@ -11,6 +13,8 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -22,7 +26,7 @@ class Footer extends StatelessWidget {
           child: IconButton(
             iconSize: 30,
             icon: Lottie.asset(EImages.googleLogo),
-            onPressed: () {},
+            onPressed: () => controller.googleSignIn(),
           ),
         ),
         const SizedBox(

@@ -3,13 +3,11 @@ import 'package:e_commerce_app/features/authentication/screens/login/widgets/log
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../../common/styles/spacing_styles.dart';
 import '../../../../common/widgets/login_signup/divider.dart';
 import '../../../../common/widgets/login_signup/footer.dart';
 import '../../../../utils/helpers/helper_functions.dart';
-import '../../controller/onboarding/onboarding_controller.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -23,8 +21,6 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
 
-    final controller = Get.put(OnboardingController());
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -37,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: ESizes.defaultSpace),
 
               // Form
-              LoginForm(dark: dark),
+              const LoginForm(),
 
               // Divider
               const FormDivider(text: ETexts.signInWith),

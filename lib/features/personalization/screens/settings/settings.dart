@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../data/repositories/authentication/auth_repository.dart';
 import '../../../shop/screens/cart/cart.dart';
 import '../../../shop/screens/order/order.dart';
 import '../address/address.dart';
@@ -21,6 +22,18 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
+
+    logoutConfirmation() {
+      Get.defaultDialog(
+        title: 'Logout',
+        middleText: 'Are you sure you want to logout?',
+        textConfirm: 'Yes',
+        textCancel: 'No',
+        onConfirm: () {
+          AuthRepository.instance.signOut();
+        },
+      );
+    }
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -160,7 +173,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.logout,
                     title: 'Logout',
                     subtitle: 'Logout from your account',
-                    onTap: () {},
+                    onTap: () => logoutConfirmation(),
                   ),
                 ],
               ),

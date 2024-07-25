@@ -89,6 +89,8 @@ class SignupController extends GetxController {
         ),
       );
     } catch (e) {
+      // Stop Loading
+      EFullScreenLoader.stopLoadingDialog();
       ELoaders.errorSnackBar(title: 'Error', message: e.toString());
     }
   }

@@ -11,6 +11,8 @@ class EFirebaseAuthException implements Exception {
         return 'The email address is already in use by another account';
       case 'invalid-email':
         return 'The email address is badly formatted';
+      case 'invalid-credential':
+        return 'The given credential is incorrect or has expired';
       case 'operation-not-allowed':
         return 'Email & Password accounts are not enabled';
       case 'weak-password':
